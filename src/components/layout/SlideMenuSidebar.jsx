@@ -49,7 +49,7 @@ export default function SlideMenuSidebar({
         </div>
 
         {/* Slides List */}
-        <div className="overflow-y-auto h-[calc(100%-140px)] p-4">
+        <div className="overflow-y-auto h-[calc(100%-180px)] p-4">
           <div className="space-y-2">
             {slides.map((slide, index) => (
               <button
