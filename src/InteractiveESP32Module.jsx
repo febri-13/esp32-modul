@@ -1,4 +1,4 @@
-// src/InteractivePictoBloxModule.jsx
+// src/InteractiveESP32Module.jsx
 import { useState, useEffect, useCallback } from 'react';
 
 // Import komponen layout BARU
@@ -8,22 +8,16 @@ import SlideMenuSidebar from './components/layout/SlideMenuSidebar';
 // Import slide components (sesuaikan dengan file Anda)
 import WelcomeSlide from './components/slides/WelcomeSlide';
 import LearningObjectivesSlide from './components/slides/LearningObjectivesSlide';
-// import GettingStartedSlide from './components/slides/GettingStartedSlide';
-import TheStageSlide from './components/slides/TheStageSlide';
-import SpriteListSlide from './components/slides/SpriteListSlide';
-import BlocksPaletteSlide from './components/slides/BlocksPaletteSlide';
-import ScriptsAreaSlide from './components/slides/ScriptsAreaSlide';
-import PracticeIntroSlide from './components/slides/PracticeIntroSlide';
-import Step1CostumesSlide from './components/slides/Step1CostumesSlide';
-import Step2RightArrowSlide from './components/slides/Step2RightArrowSlide';
-import Step3LeftArrowSlide from './components/slides/Step3LeftArrowSlide';
-import Step4ClickToSpeakSlide from './components/slides/Step4ClickToSpeakSlide';
-import SavingSlide from './components/slides/SavingSlide';
-import ReflectionSlide from './components/slides/ReflectionSlide';
-import ChallengesSlide from './components/slides/ChallengesSlide';
-import FinalMessageSlide from './components/slides/FinalMessageSlide';
+import IslamicValueIntroSlide from './components/slides/IslamicValuesIntroSlide';
+import WhatIsESP32Slide from './components/slides/WhatIsESP32Slide';
+import ESP32VsArduinoSlide from './components/slides/Esp32VsArduinoSlide';
+import BoardAnatomySlide from './components/slides/BoardAnatomySlide';
+import ToolsAndSetupSlide from './components/slides/ToolsAndSetupSlide';
+import BlinkLogicSlide from './components/slides/BlinkLogicSlide';
+import CodeExplainedSlide from './components/slides/CodeExplainedSlide';
 
-export default function InteractivePictoBloxModule() {
+
+export default function InteractiveESP32Module() {
   // State management
   const [currentSlide, setCurrentSlide] = useState(0);
   const [completedSlides, setCompletedSlides] = useState(new Set());
@@ -33,20 +27,13 @@ export default function InteractivePictoBloxModule() {
   const slides = [
     { title: 'Welcome to PictoBlox!', component: <WelcomeSlide /> },
     { title: 'Learning Objectives', component: <LearningObjectivesSlide /> },
-    // { title: 'Getting Started', component: <GettingStartedSlide /> },
-    { title: 'The Stage', component: <TheStageSlide /> },
-    { title: 'Sprite List & Info', component: <SpriteListSlide /> },
-    { title: 'Blocks Palette', component: <BlocksPaletteSlide /> },
-    { title: 'Scripts Area', component: <ScriptsAreaSlide /> },
-    { title: 'Practice Time!', component: <PracticeIntroSlide /> },
-    { title: 'Step 1: Costumes', component: <Step1CostumesSlide /> },
-    { title: 'Step 2: Right Arrow', component: <Step2RightArrowSlide /> },
-    { title: 'Step 3: Left Arrow', component: <Step3LeftArrowSlide /> },
-    { title: 'Step 4: Click to Speak', component: <Step4ClickToSpeakSlide /> },
-    { title: 'Saving Your Project', component: <SavingSlide /> },
-    { title: 'Reflection', component: <ReflectionSlide /> },
-    { title: 'Challenges', component: <ChallengesSlide /> },
-    { title: 'Congratulations!', component: <FinalMessageSlide /> },
+    { title: 'Islamic Value', component: <IslamicValueIntroSlide /> },
+    { title: 'What Is ESP32 ', component: <WhatIsESP32Slide />},
+    { tilte: 'ESP32 Vs Arduino', component: <ESP32VsArduinoSlide />},
+    { tilte: 'Board Anatomy ESP32', component: <BoardAnatomySlide />},
+    { tilte: 'Tools and Setup', component: <ToolsAndSetupSlide />},
+    { tilte: 'Blink Logic', component: <BlinkLogicSlide />},
+    { tilte: 'Code Explained', component: <CodeExplainedSlide />},
   ];
 
   // Calculate progress

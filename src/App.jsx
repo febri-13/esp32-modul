@@ -1,10 +1,10 @@
 import React from 'react';
-import InteractivePictoBloxModule from './InteractivePictoBloxModule';
+import InteractiveESP32Module from './InteractiveESP32Module';
 
 function App() {
   return (
     <div className="h-screen w-screen overflow-hidden">
-      <InteractivePictoBloxModule />
+      <InteractiveESP32Module />
     </div>
   );
 }

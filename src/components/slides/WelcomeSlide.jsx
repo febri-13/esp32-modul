@@ -5,7 +5,7 @@ export default function WelcomeSlide() {
   return (
     <div className="h-full flex flex-col justify-center items-center text-center p-4 sm:p-6 md:p-8 overflow-y-auto">
       <img 
-        src="/logo.jpg" 
+        src="/logo.webp" 
         alt="SMP ABBS Logo" 
         className="h-16 sm:h-20 md:h-24 w-auto mb-4 sm:mb-6"
       />
