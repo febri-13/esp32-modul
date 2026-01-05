@@ -55,6 +55,14 @@ export default function InteractiveESP32Module() { // ✅ Perbaiki nama: bukan "
     { title: 'Wokwi Simulation', component: <WokwiSimulationSlide /> },
     { title: 'Upload to Board', component: <UploadToBoardSlide /> },
     { title: 'Mini Challenge', component: <MiniChallengeSlide /> },
+    { 
+      title: 'Quiz: ESP32 Coding', 
+      component: <QuizSlide 
+        quizId="esp32-coding" 
+        onNext={() => setCurrentSlide(p => p + 1)} 
+        onPrev={() => setCurrentSlide(p => p - 1)} 
+      /> 
+    },
     { title: 'Bonus: WiFi Scanner', component: <WifiScannerSlide /> },
     { title: 'Reflection', component: <ReflectionSlide /> },
     { title: 'Final Message', component: <FinalMessageSlide /> },
