@@ -22,11 +22,11 @@ export default function Header({
           {/* Left: Logo/Title */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">P</span>
+              <span className="text-white font-bold text-xl">E</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-gray-800">PictoBlox Level 7</h1>
-              <p className="text-xs text-gray-500">Stage 1: Welcome to Coding</p>
+              <h1 className="text-lg font-bold text-gray-800">ESP 32 Level 8</h1>
+              <p className="text-xs text-gray-500">Phase 1: Welcome to ESP32</p>
             </div>
           </div>
 

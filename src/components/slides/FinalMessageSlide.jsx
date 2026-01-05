@@ -1,37 +1,82 @@
 // src/components/slides/FinalMessageSlide.jsx
+import { RocketIcon, GraduationCapIcon, SparklesIcon, TrophyIcon } from 'lucide-react';
+
 export default function FinalMessageSlide() {
   return (
-    <div className="h-full flex flex-col items-center justify-center text-center p-4 sm:p-6 md:p-8 overflow-y-auto">
-      <div className="text-6xl sm:text-8xl md:text-9xl mb-4 sm:mb-6 animate-bounce">🌟</div>
-      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-        Congratulations!
-      </h1>
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 mb-6">
-        You've Completed Stage 1!
-      </h2>
-      
-      <div className="bg-gradient-to-r from-green-400 to-blue-500 text-white p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-xl max-w-2xl w-full mb-6">
-        <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-          "Coding is about <strong>experimenting</strong>. If something breaks — great! Now you get to fix it. That's how you learn."
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 p-4 flex flex-col">
+      {/* Header */}
+      <div className="text-center mb-8">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-600 text-white mb-4">
+          <RocketIcon size={32} />
+        </div>
+        <h1 className="text-3xl font-bold text-gray-800">Congratulations! 🎉</h1>
+        <p className="text-lg text-gray-600 mt-2">
+          You’ve just taken your first step into the world of smart devices.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-        {[
-          { emoji: "✅", title: "Interface Mastered", bg: "bg-blue-100" },
-          { emoji: "🎨", title: "First Project Created", bg: "bg-purple-100" },
-          { emoji: "🚀", title: "Ready for Stage 2", bg: "bg-pink-100" }
-        ].map((item, i) => (
-          <div key={i} className={`${item.bg} p-4 sm:p-5 rounded-xl`}>
-            <div className="text-3xl sm:text-4xl mb-2">{item.emoji}</div>
-            <p className="text-sm sm:text-base font-semibold text-gray-800">{item.title}</p>
-          </div>
-        ))}
+      {/* Core Message */}
+      <div className="max-w-3xl mx-auto w-full bg-white rounded-2xl shadow-lg p-6 mb-8 text-center">
+        <div className="text-5xl mb-4">💡</div>
+        <h2 className="text-2xl font-bold text-gray-800">
+          You didn’t just blink an LED—  
+          You commanded a microcontroller to obey your logic.
+        </h2>
+        <p className="mt-4 text-gray-700">
+          That tiny light? It’s the beginning of robots, smart farms, disaster alerts, and solutions for our ummah.
+        </p>
       </div>
 
-      <p className="text-base sm:text-lg text-gray-600">
-        Keep exploring and happy coding! 💻✨
-      </p>
+      {/* Next Steps */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto w-full">
+        <div className="bg-white rounded-xl shadow-md p-5 border-l-4 border-blue-500">
+          <GraduationCapIcon size={28} className="text-blue-600 mb-2" />
+          <h3 className="font-bold text-lg">➡️ What’s Next?</h3>
+          <ul className="mt-3 space-y-1 text-gray-700 list-disc pl-5">
+            <li>Module 2: Control an external LED & button</li>
+            <li>Module 3: Read sensors (temperature, light)</li>
+            <li>Module 4: Send data to the cloud (IoT!)</li>
+          </ul>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-md p-5 border-l-4 border-amber-500">
+          <SparklesIcon size={28} className="text-amber-600 mb-2" />
+          <h3 className="font-bold text-lg">🛠️ Keep Practicing</h3>
+          <ul className="mt-3 space-y-1 text-gray-700 list-disc pl-5">
+            <li>Try the WiFi Scanner on real hardware</li>
+            <li>Modify the blink speed 10 different ways</li>
+            <li>Document your experiments in a lab journal</li>
+          </ul>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-md p-5 border-l-4 border-purple-500">
+          <TrophyIcon size={28} className="text-purple-600 mb-2" />
+          <h3 className="font-bold text-lg">🕌 With Purpose</h3>
+          <p className="mt-3 text-gray-700">
+            Let every line of code reflect:
+            <br />
+            <span className="font-semibold">Niyyah</span> (for the benefit of others),  
+            <span className="font-semibold">Amanah</span> (responsibility),  
+            <span className="font-semibold">Shukr</span> (gratitude for this knowledge).
+          </p>
+        </div>
+      </div>
+
+      {/* Closing Verse + Signature */}
+      <div className="mt-10 text-center max-w-3xl mx-auto">
+        <blockquote className="text-xl italic text-gray-800 bg-white/70 py-4 px-6 rounded-xl">
+          “And prepare against them whatever you are able of power…”  
+          <span className="block mt-2 font-bold text-emerald-700">— Q.S. Al-Anfāl 8:60</span>
+        </blockquote>
+        <p className="mt-6 text-gray-600">
+          May your hands build, your mind question, and your heart remain humble.  
+          <br />
+          <span className="font-semibold">The future isn’t just coming — you’ll help shape it.</span>
+        </p>
+        <div className="mt-8 text-sm text-gray-500">
+          Module 1 Complete ✅ | ESP32 Adventure, Day 1
+        </div>
+      </div>
     </div>
   );
 }

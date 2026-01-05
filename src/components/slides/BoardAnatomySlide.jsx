@@ -70,31 +70,7 @@ export default function BoardAnatomySlide() {
         </div>
       </div>
 
-      {/* Part 2: Safety Rules — Full-width card */}
-      <div className="bg-red-50 border-l-4 border-red-500 rounded-r-xl p-5 mb-6">
-        <h3 className="font-bold text-red-800 mb-3 flex items-center gap-2">
-          <ShieldCheck className="w-5 h-5" /> ⚠️ Safety Rules: “No Magic Smoke!”
-        </h3>
-        <ul className="list-disc pl-5 space-y-2 text-red-800 text-sm md:text-base">
-          <li>
-            <strong>3.3V Warning:</strong> ESP32 runs on 3.3V — <em>never connect a 5V signal directly</em> to its pins.
-          </li>
-          <li>
-            <strong>No Short Circuits:</strong> Never connect GND directly to 3.3V/VIN — it causes overheating.
-          </li>
-          <li>
-            <strong>Unplug First:</strong> Always disconnect USB before wiring. Double-check → Then power on.
-          </li>
-          <li>
-            <strong>GPIO 34–39:</strong> Input-only pins — cannot be used with <code className="bg-red-100 px-1 rounded">digitalWrite()</code>.
-          </li>
-        </ul>
-      </div>
-
-      {/* Footer Tip */}
-      <div className="text-center text-gray-500 text-sm md:text-base bg-gray-50 p-3 rounded-lg border border-gray-200">
-        🔍 Tip: Find your board’s pinout online (e.g., “ESP32 DevKit V1 Pinout”) before connecting sensors.
-      </div>
+     
     </div>
   );
 }
